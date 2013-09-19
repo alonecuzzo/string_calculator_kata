@@ -35,6 +35,5 @@ describe "String Calculator" do
 			calc = make_calc.add("1,2,3,4,5,6,7")
 			calc.should eq 28
 		end
-		
 	 end
 end
