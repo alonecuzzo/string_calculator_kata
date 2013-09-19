@@ -35,10 +35,18 @@ describe "String Calculator" do
 			calc = make_calc.add("1,2,3,4,5,6,7")
 			calc.should eql 28
 		end
+
 		context "it should handle new line characters" do
 			it "should return 6 if 1\n2,3 is entered" do
 				calc = make_calc.add("1\n2,3")
 				calc.should eql 6
+			end
+		end
+
+		context "should support different delimiters" do
+			it "should return 3 for //;\n1;2" do
+				calc = make_calc.add("//;\n1;2")
+				calc.should eql 3
 			end
 		end
 	 end
