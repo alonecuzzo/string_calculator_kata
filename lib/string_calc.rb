@@ -1,6 +1,10 @@
 class StringCalculator
 	def add(numbers)
-		return numbers[0].to_i + numbers[2].to_i if numbers.length == 3
+		sum = 0
+		numbers.each_char do|c|
+			sum += c.to_i if c != ","	
+		end
+		return sum if sum > 0
 		return numbers.to_i if numbers != ""
 		return 0
 	end
