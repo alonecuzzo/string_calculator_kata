@@ -33,7 +33,13 @@ describe "String Calculator" do
 		end
 		it "should return 28 if 1, 2, 3, 4, 5, 6, 7 is entered" do
 			calc = make_calc.add("1,2,3,4,5,6,7")
-			calc.should eq 28
+			calc.should eql 28
+		end
+		context "it should handle new line characters" do
+			it "should return 6 if 1\n2,3 is entered" do
+				calc = make_calc.add("1\n2,3")
+				calc.should eql 6
+			end
 		end
 	 end
 end
