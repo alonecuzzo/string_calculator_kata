@@ -1,6 +1,5 @@
 class StringCalculator
 	def add(numbers)
-#		raise StandardError, 'Cannot handle negative numbers' if numbers.to_i < 0
 		delimiter = ','
 		sum = 0
 		negative_is = ''
