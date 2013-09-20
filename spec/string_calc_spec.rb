@@ -61,5 +61,8 @@ describe "String Calculator" do
 		it "should throw an exception if -1, -2 entered and list the offending negative numbers" do
 			expect { make_calc.add("-1,-2") }.to raise_error('Cannot handle negative numbers: -1, -2')
 		end
+		it "should throw an exception if -10, -2 entered and list the offending negative numbers" do
+			expect { make_calc.add("-10,-2") }.to raise_error('Cannot handle negative numbers: -10, -2')
+		end
 	 end
 end
