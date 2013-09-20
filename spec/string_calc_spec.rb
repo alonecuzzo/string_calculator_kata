@@ -35,6 +35,10 @@ describe "String Calculator" do
 			calc = make_calc.add("1,2,3,4,5,6,7")
 			calc.should eql 28
 		end
+		it "should return 19 if 10, 9 is entered" do
+			calc = make_calc.add("10,9")
+			calc.should eql 19
+		end
 
 		context "it should handle new line characters" do
 			it "should return 6 if 1\n2,3 is entered" do
@@ -48,6 +52,14 @@ describe "String Calculator" do
 				calc = make_calc.add("//;\n1;2")
 				calc.should eql 3
 			end
+		end
+
+		it "should throw an exception if -1 entered" do
+			expect { make_calc.add("-1") }.to raise_error
+		end
+
+		it "should throw an exception if -1, -2 entered and list the offending negative numbers" do
+			expect { make_calc.add("-1,-2") }.to raise_error('Cannot handle negative numbers: -1, -2')
 		end
 	 end
 end
