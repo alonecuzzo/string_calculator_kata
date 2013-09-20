@@ -31,5 +31,10 @@ describe "StringCalculator" do
 			calc = make_calc.add('2,2')
 			calc.should eql 4
 		end
+
+		it "should return 55 if 1,2,3,4,5,6,7,8,9,10 is entered" do 
+			calc = make_calc.add('1,2,3,4,5,6,7,8,9,10')
+			calc.should eql 55
+		end
 	end
 end
