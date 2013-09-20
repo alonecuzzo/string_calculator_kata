@@ -12,11 +12,13 @@ class StringCalculator
 		numbers.split( delimiter ).each do |n|
 			n.split( "\n" ).each do |sn|
 				sum += sn.to_i
-				raise StandardError, "Cannot handle negative numbers" if sn.to_i < 0
+				negative_is += " #{sn.to_i}," if sn.to_i < 0
 			end
 		end
-		#raise StandardError, 'Cannot handle negative numbers:' + negative_i_string if negative_i_string.length > 0
 
+		negative_is[negative_is.length-1] = '' if negative_is.length > 0
+		raise StandardError, 'Cannot handle negative numbers:' + negative_is if negative_is.length > 0
+		
 		return sum 
 	end
 end
