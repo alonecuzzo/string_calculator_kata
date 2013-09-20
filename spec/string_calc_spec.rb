@@ -11,5 +11,10 @@ describe "StringCalculator" do
 			calc = StringCalculator.new.add('1')
 			calc.should eql 1
 		end
+
+		it "should return 2 if 2 is entered" do 
+			calc = StringCalculator.new.add('2')
+			calc.should eql 2
+		end
 	end
 end
