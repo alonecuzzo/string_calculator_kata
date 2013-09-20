@@ -26,5 +26,10 @@ describe "StringCalculator" do
 			calc = make_calc.add('1,2')
 			calc.should eql 3
 		end
+
+		it "should return 4 if 2,2 is entered" do 
+			calc = make_calc.add('2,2')
+			calc.should eql 4
+		end
 	end
 end
