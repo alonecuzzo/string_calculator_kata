@@ -41,5 +41,10 @@ describe "StringCalculator" do
 			calc = make_calc.add("1\n2,3")
 			calc.should eql 6
 		end
+
+		it "should return 6 if //;\n1;2 is entered" do
+			calc = make_calc.add("//;\n1;2")
+			calc.should eql 3
+		end
 	end
 end
