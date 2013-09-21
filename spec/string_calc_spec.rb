@@ -19,5 +19,9 @@ describe "StringCalculator" do
 			calc = make_calc.add("1,2")
 			calc.should eql 3
 		end
+		it "should return 91 when 1,2,3,45,6,7,8,9,10 is entered" do
+			calc = make_calc.add("1,2,3,45,6,7,8,9,10")
+			calc.should eql 91
+		end
 	end
 end
