@@ -23,5 +23,9 @@ describe "StringCalculator" do
 			calc = make_calc.add("1,2,3,45,6,7,8,9,10")
 			calc.should eql 91
 		end
+		it "should return 6 when 1\\n2,3 is entered" do
+			calc = make_calc.add("1\n2,3")
+			calc.should eql 6
+		end
 	end
 end
