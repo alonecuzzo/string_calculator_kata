@@ -7,6 +7,7 @@ class StringCalculator
 		numbers.split( delimiter ).each do |c| 
 			c.split( "\n" ).each do |sc|
 				sum += sc.to_i
+				raise StandardError, "" if sc.to_i < 0
 			end
 		end
 		return sum
