@@ -31,5 +31,8 @@ describe "StringCalculator" do
 			calc = make_calc.add("//;\n1;2")
 			calc.should eql 3
 		end
+		it "should raise exception when -1 is entered" do 
+			expect{make_calc.add("-1")}.to raise_exception
+		end
 	end
 end
