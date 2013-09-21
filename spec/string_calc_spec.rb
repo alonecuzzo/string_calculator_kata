@@ -50,5 +50,9 @@ describe "StringCalculator" do
 		it "should raise exception if -1 is entered" do
 			expect{ make_calc.add("-1") }.to raise_exception
 		end
+
+		it "should raise exception with message 'Cannot accept negative numbers: -1, -2'if -1,-2 is entered" do
+			expect{ make_calc.add("-1,-2") }.to raise_exception("Cannot accept negative numbers: -1, -2")
+		end
 	end
 end
